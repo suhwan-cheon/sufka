@@ -3,12 +3,16 @@ version: '3'
 services:
   zookeeper:
     image: confluentinc/cp-zookeeper:latest
+    hostname: sufka_zookeeper
+    container_name: sufka_zookeeper
     environment:
       ZOOKEEPER_CLIENT_PORT: 2181
       ZOOKEEPER_TICK_TIME: 2000
 
   kafka1:
     image: confluentinc/cp-kafka:latest
+    hostname: sufka1
+    container_name: sufka1
     depends_on:
       - zookeeper
     environment:
@@ -19,6 +23,8 @@ services:
 
   kafka2:
     image: confluentinc/cp-kafka:latest
+    hostname: sufka2
+    container_name: sufka2
     depends_on:
       - zookeeper
     environment:
@@ -29,6 +35,8 @@ services:
 
   kafka3:
     image: confluentinc/cp-kafka:latest
+    hostname: sufka3
+    container_name: sufka3
     depends_on:
       - zookeeper
     environment:
