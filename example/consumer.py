@@ -1,7 +1,7 @@
 from confluent_kafka import Consumer, KafkaException
 
 # Kafka 클러스터의 부트스트랩 서버 주소
-bootstrap_servers = 'kafka1:9092'
+bootstrap_servers = 'localhost:9092'
 
 # Kafka 토픽
 topic = 'sufka-topic1'
